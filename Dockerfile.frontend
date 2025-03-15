@@ -1,0 +1,20 @@
+# Use an official Node runtime with a newer version (e.g., Node 22-alpine)
+FROM node:22-alpine
+
+WORKDIR /app
+
+# Now update npm if needed (this should work now)
+RUN npm install -g npm@11.2.0
+
+RUN npm config set registry https://registry.npmjs.org/
+
+# Copy package files and install dependencies
+COPY frontend/package.json frontend/package-lock.json* ./
+RUN npm install
+
+# Copy the rest of the frontend code
+COPY frontend/ .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
