@@ -13,8 +13,6 @@ Sarvam is a chat application powered by a Large Language Model (LLM) designed to
 - [Inference Optimization](#inference-optimization)
 - [Key Technical Decisions](#key-technical-decisions)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
